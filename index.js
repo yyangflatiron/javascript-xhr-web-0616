@@ -8,7 +8,7 @@ function showRepositories(event, data) {
 function getRepositories() {
   const req = new XMLHttpRequest()
   req.addEventListener("load", showRepositories);
-  req.open("GET", 'https://api.github.com/users/octocat/repos')
+  req.open("GET", 'https://api.github.com/users/yyangflatiron/repos')
   req.send()
 }
 
@@ -17,7 +17,7 @@ function getCommits(el) {
   const name = el.dataset.repo
   const req = new XMLHttpRequest()
   req.addEventListener("load", showCommits);
-  req.open("GET", 'https://api.github.com/repos/octocat/' + name + '/commits')
+  req.open("GET", 'https://api.github.com/repos/yyangflatiron/' + name + '/commits')
   req.send()
 }
 
